@@ -1,0 +1,332 @@
+:root{
+
+    /*Color variables*/
+
+    --tomato: #ff6257;
+    --DarkSlateGrey: hsl(234, 29%, 20%);
+    --CharcoalGrey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+
+    /*Font variables*/
+    --Roboto: 'Roboto', sans-serif;
+
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+
+html{
+    font-size: 62.5%; /*makes font size 10px*/
+}
+body{
+    font-size: 1.6rem;
+    font-family: var(--Roboto);
+    color: var(--DarkSlateGrey);
+    background-color: var(--CharcoalGrey);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+h1,h2{
+  font-size: 4.8rem;
+
+}
+.btn{
+  padding: 15px 0px;
+  border-radius: 7px;
+  background-color:var(--DarkSlateGrey);
+  color:var(--White);
+  font-weight:bold;
+}
+.btn:hover{
+  cursor: pointer;
+  background-image: linear-gradient(
+  90deg,
+  hsl(341deg 91% 65%) 0%,
+  hsl(342deg 92% 65%) 6%,
+  hsl(343deg 94% 65%) 13%,
+  hsl(345deg 95% 66%) 19%,
+  hsl(346deg 96% 66%) 25%,
+  hsl(347deg 97% 66%) 31%,
+  hsl(349deg 98% 67%) 37%,
+  hsl(350deg 98% 67%) 44%,
+  hsl(351deg 99% 67%) 50%,
+  hsl(353deg 100% 67%) 56%,
+  hsl(354deg 100% 68%) 63%,
+  hsl(356deg 100% 68%) 69%,
+  hsl(357deg 100% 68%) 75%,
+  hsl(359deg 100% 68%) 81%,
+  hsl(1deg 100% 68%) 87%,
+  hsl(2deg 100% 68%) 94%,
+  hsl(4deg 100% 67%) 100%);
+  color: var(--White);
+} 
+/*------Sign up part-------*/
+
+.subscribe{
+  background-color: var(--White);
+  border-radius: 25px;
+}
+.subscribe .container{
+  width: 930px;
+  padding:20px;
+  display: flex;
+  justify-content: center;
+}
+
+.subscribe .content{
+  width: 45%;
+  margin: 50px auto 0 auto;
+  
+}
+.subscribe .content *{
+  margin-top: 20px;
+}
+
+.subscribe .list{
+  list-style-image: url('/assets/images/icon-list.svg');
+  padding-left: 25px; 
+}
+
+.subscribe .list-item{
+  padding-left: 15px;
+  margin-top: 10px;
+}
+
+.subscribe label{
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.subscribe .errorMessage{
+  float: right;
+  color: var(--tomato);
+  display: none;
+}
+.subscribe .errorMessage{
+  font-size: 1.4rem;
+  margin-top: 0px !important;
+}
+.subscribe .email{
+  margin-top: 5px;
+  padding: 10px 20px;
+  width: 100%;
+  display: block;
+  color: var(--Grey);
+  font-weight: 400;
+  border: 1px solid var(--Grey);
+  border-radius: 7px;
+}
+.subscribe .email:focus{
+  outline: none;
+  border: 1px solid var(--DarkSlateGrey);
+  color: var(--DarkSlateGrey);
+}
+.subscribe .error {
+  border-color: var(--tomato);
+  color: var(--tomato);
+  background-color: #ffbab565;
+}
+
+.subscribe .btn{
+  margin-top: 30px;
+  width: 100%;
+  border:none;
+}
+
+.subscribe .picture{
+  width: 100%;
+}
+
+
+/*----------Success part----------*/
+
+.success{
+  display:none;
+  width: 500px;
+  padding: 30px 60px 50px 60px;
+  background-color: var(--White);
+  border-radius: 25px;
+}
+
+.success .container *{
+  margin-top: 20px; 
+}
+
+.success h2{
+  line-height: 110%;
+}
+
+.success .btn{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+.clientEmail{
+  font-weight: 700;
+}
+
+/*--------------Responsivness--------*/
+
+@media screen and (max-width: 1370px){
+  .subscribe .container{
+    width: 800px;
+
+  }
+  .subscribe .content *{
+    margin-top: 15px;
+  }
+  .subscribe .content{
+    margin: 0px auto;
+    width:50%;
+  }
+  .subscribe .image{
+    width: 40%;
+  }
+
+  .success{
+    width: 400px;
+    padding: 15px 30px 30px 30px;
+    
+  }
+  .success .container *{
+    margin-top: 15px; 
+  }
+
+}
+
+
+@media screen and (max-width: 825px){
+  body{
+    font-size: 1.4rem;
+  }
+
+  h1,h2{
+    font-size: 4rem;
+
+  }
+  .subscribe label{
+    font-size: 1.2rem;
+  }
+  .subscribe .errorMessage{
+    font-size: 1.2rem;
+  }
+
+  .subscribe {
+    width: 80%;
+    min-width: 600px;
+    margin: 0 auto;
+  }
+  .subscribe .container{
+    width: 100%;
+  }
+  .subscribe .content{
+    width: 100%;
+    padding: 0px 10px;
+  }
+  .subscribe .image{
+    width: 100%;
+  }
+  .subscribe .picture{
+    border-radius: 25px;
+  }
+
+  .subscribe .errorMessage{
+    margin-left: auto;
+  }
+
+  .subscribe .content *{
+    margin-top: 10px;
+  }
+  .subscribe .list-item{
+    padding-left: 15px;
+    margin-top: 5px;
+  }
+
+  .success{
+    width: 375px;
+    padding: 10px 20px 20px 20px;
+    
+  }
+  .success .container *{
+    margin-top: 10px; 
+  }
+}
+
+@media screen and (max-width: 600px){
+
+  body{
+    font-size: 1.2rem;
+  }
+
+  h1,h2{
+    font-size: 3.2rem;
+
+  }
+  .subscribe label{
+    font-size: 1rem;
+  }
+  .subscribe .errorMessage{
+    font-size: 1rem;
+  }
+  
+  .subscribe{
+    width: 80%;
+    min-width: 375px;
+  }
+  .subscribe .container{
+    width: 100%;
+    padding: 0px;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .subscribe .content{
+    order: 2;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 30px 30px 30px;
+  }
+  
+  .subscribe .img{
+    width: 100%;
+  }
+  .subscribe .picture{
+   width: 100%;
+  }
+  
+}
+
+@media screen and (max-width: 375px){
+  .subscribe .content *{
+    margin-top: 5px;
+  }
+}
+
+
